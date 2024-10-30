@@ -52,9 +52,9 @@ function App() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-[url('https://www.bankofbaroda.in/-/media/project/bob/countrywebsites/india/blogs/loansborrowings/images/cluster/premature-withdrawal-of-fixed-deposit-penalty-charges--alternative-options.jpg')] bg-cover">
-      <div className="bg-transparent p-8 shadow-lg rounded-lg w-full max-w-md ">
-        <h1 className="text-3xl font-bold text-center mb-6">Current Balance: ${balance}</h1>
+    <div className="flex items-center justify-center min-h-screen bg-[url('https://img.freepik.com/free-photo/top-view-bank-notes-with-rubber-band-copy-space_23-2148546855.jpg?t=st=1730271336~exp=1730274936~hmac=fc45566b04f8e50ad46026699f0484dff497dfd80255f2d248bc8fd36c0a060f&w=1380')] bg-cover bg-center">
+      <div className="bg-transparent p-8 shadow-lg rounded-lg w-full max-w-md backdrop-blur-sm ">
+        <h1 className="text-3xl font-bold text-center mb-6">Current Balance: ₹{balance}</h1>
 
         <div className="space-y-4 mb-4">
           <input
@@ -100,11 +100,11 @@ function App() {
             {transactions.map((transaction) => (
               <li
                 key={transaction._id}
-                className={`flex justify-between p-4 border ${transaction.type === 'deposit' ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50'
+                className={`flex justify-between p-4 border ${transaction.type === 'deposit' ? 'border-green-500 bg-green-200' : 'border-red-500 bg-red-200'
                   } rounded-md`}
               >
                 <span>{transaction.description}</span>
-                <span>${transaction.amount}</span>
+                <span>₹{transaction.amount}</span>
                 <span>{transaction.date}</span>
               </li>
             ))}
@@ -112,7 +112,7 @@ function App() {
         </div>
       </div>
     </div>
-  );
+  );  
 }
 
 export default App
