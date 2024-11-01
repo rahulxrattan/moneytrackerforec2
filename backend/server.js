@@ -1,11 +1,18 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import mongoose from 'mongoose';
+import cors from 'cors';
+
 
 import Transaction from './models/transaction.models.js';
 
 const app = express();
 dotenv.config()
+app.use(cors({
+  origin: 'http://34.197.94.125:5173', // Replace <your-ec2-ip> with your actual IP
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
+}));
 
 const PORT = process.env.PORT;
 app.use(express.json());
@@ -52,10 +59,10 @@ app.post('/api/transaction', async(req, res) => {
   }
 });
 
-app.listen(PORT, () =>{
+app.listen(PORT, '0.0.0.0',() =>{
   const connectDB=async()=>{
     try {
-      console.log(process.env.MONGODB_URI);
+      console.log(process.env.MONGODB_URI)
        await mongoose.connect(process.env.MONGODB_URI)
        
        console.log("sucessfully connected to mongodb");

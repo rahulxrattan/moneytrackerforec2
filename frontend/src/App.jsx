@@ -52,9 +52,11 @@ function App() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-[url('https://img.freepik.com/free-photo/top-view-bank-notes-with-rubber-band-copy-space_23-2148546855.jpg?t=st=1730271336~exp=1730274936~hmac=fc45566b04f8e50ad46026699f0484dff497dfd80255f2d248bc8fd36c0a060f&w=1380')] bg-cover bg-center">
-      <div className="bg-transparent p-8 shadow-lg rounded-lg w-full max-w-md backdrop-blur-sm ">
-        <h1 className="text-3xl font-bold text-center mb-6">Current Balance: ₹{balance}</h1>
+    //<div className="flex items-center justify-center min-h-screen bg-[url('https://img.freepik.com/free-photo/top-view-bank-notes-with-rubber-band-copy-space_23-2148546855.jpg?t=st=1730271336~exp=1730274936~hmac=fc45566b04f8e50ad46026699f0484dff497dfd80255f2d248bc8fd36c0a060f&w=1380')] bg-cover bg-center">
+    <div className="flex items-center justify-center min-h-screen bg-black">
+        <div className="bg-transparent p-8 shadow-lg rounded-lg w-full max-w-md backdrop-blur-sm ">
+      <h1 className="text-3xl font-bold text-center mb-6 text-white">Current Balance: ₹{balance}</h1>
+
 
         <div className="space-y-4 mb-4">
           <input
