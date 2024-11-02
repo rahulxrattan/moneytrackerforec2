@@ -9,7 +9,7 @@
     "dev": "vite",
     "build": "vite build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "pm2 start backend/server.js --name my-backend --watch && pm2 start npm --name my-frontend -- run dev"
+    
   },
   "author": "",
   "license": "ISC",
