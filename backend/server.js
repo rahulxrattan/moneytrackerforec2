@@ -8,9 +8,8 @@ import Transaction from './models/transaction.models.js';
 
 const app = express();
 dotenv.config()
-const API_URL = process.env.API_URL;
 app.use(cors({
-  origin: API_URL, // Replace <your-ec2-ip> with your actual IP
+  origin: 'http://34.197.94.125:5173', // Replace <your-ec2-ip> with your actual IP
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 }));
